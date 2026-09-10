@@ -17,6 +17,6 @@ Sales_data& Sales_data::operator+=(const Sales_data &rhs) {
 }
 ```
 
-The code in this repository is designed to demonstrate that the answer to the question above is Version A. Defining `operator+` in terms of `operator+=` is more efficient than the other way around. The reason for this is because `operator+` has to make an extra copy, while `operator+=` can perform the calculation in place. If we define `operator+=` in terms of `operator+`, we give `operator+=` the inefficiency of `operator+`, which is unnecessary.
+The code in this repository is designed to demonstrate that the answer to the question above is Version A. Defining `operator+` in terms of `operator+=` is more efficient than the other way around. The reason for this is because `operator+` has to make an extra copy and an extra assignment, while `operator+=` can perform the calculation in place. If we define `operator+=` in terms of `operator+`, we give `operator+=` the inefficiency of `operator+`, which is unnecessary.
 
 
